@@ -1,0 +1,20 @@
+pipeline {
+    agent any
+    stages{
+        stage("git clone"){
+            steps{
+                git 'https://github.com/yankils/hello-world.git'
+            }
+        }
+        stage("Maven Build"){
+            steps{
+                sh "cd hello-world"
+                sh "maven clean install"
+            }
+                
+        }
+        
+    }
+    
+}
+
