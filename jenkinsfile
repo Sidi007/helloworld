@@ -8,7 +8,6 @@ pipeline {
         }
         stage("Maven Build"){
             steps{
-                sh "cd hello-world"
                 sh "maven clean install"
             }
                 
